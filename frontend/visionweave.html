@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VisionWeave - AI Art Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="visionweave.css" />
+</head>
+
+<body>
+  <header>
+    <h1>VisionWeave</h1>
+    <p>Crafting Your Imagination with Artificial Intelligence</p>
+  </header>
+
+  <main class="main">
+    <div class="mode-toggle">
+      <button class="btn" onclick="showSection('generate')">Generate Image</button>
+      <button class="btn" onclick="showSection('modify')">Modify Image</button>
+    </div>
+
+    <div id="generate" class="section" style="display: none;">
+      <h2>Generate New Image</h2>
+      <form id="generateForm">
+        <label for="prompt">Describe your image</label>
+        <input type="text" id="prompt" name="prompt" required>
+
+        <label for="style">Choose Art Style</label>
+        <select id="style" name="style">
+          <option value="anime">Anime</option>
+          <option value="ghibli">Ghibli</option>
+          <option value="realism">Realism</option>
+          <option value="cyberpunk">Cyberpunk</option>
+          <option value="watercolor">Watercolor</option>
+          <option value="oil painting">Oil Painting</option>
+          <option value="pixel art">Pixel Art</option>
+          <option value="cartoon">Cartoon</option>
+        </select>
+
+        <button class="btn" type="submit">Generate</button>
+      </form>
+      <div class="preview" id="generatePreview"></div>
+
+      <div class="slider-container">
+        <div class="slider" id="generateSlider"></div>
+      </div>
+    </div>
+
+    <div id="modify" class="section" style="display: none;">
+      <h2>Modify Existing Image</h2>
+      <form id="modifyForm">
+        <label for="upload">Upload Image</label>
+        <input type="file" id="upload" name="upload" accept="image/*" required>
+
+        <label for="modPrompt">Describe Modification</label>
+        <input type="text" id="modPrompt" name="modPrompt" required>
+
+        <label for="model">Choose ControlNet Model</label>
+        <select id="model" name="model">
+          <option value="canny">Canny</option>
+          <option value="depth">Depth</option>
+          <option value="pose">Pose</option>
+          <option value="scribble">Scribble</option>
+          <option value="segmentation">Segmentation</option>
+        </select>
+
+        <button class="btn" type="submit">Modify</button>
+      </form>
+      <div class="preview" id="modifyPreview"></div>
+
+      <div class="slider-container">
+        <div class="slider" id="modifySlider"></div>
+      </div>
+    </div>
+
+    <div class="gallery-section">
+      <h2>Explore Our Creations</h2>
+      <div class="gallery-slider">
+        <img src="images/screenshot1.png" alt="Ghibli Art">
+        <img src="images/screenshot7.png" alt="Anime Art">
+        <img src="images/screenshot3.png" alt="Ghibli Scene">
+        
+      </div>
+    </div>
+
+    <div class="about-section">
+      <h2>About VisionWeave</h2>
+      <p>VisionWeave Studio</p>
+      <p>VisionWeave is your gateway to creating stunning AI-generated art. Transform your ideas into breathtaking visuals with our cutting-edge technology.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Contact us: <a href="mailto:yachna@visionweave.com">yachna@visionweave.com</a></p>
+    <p>Follow us: <a href="#">Twitter</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a></p>
+  </footer>
+
+  <script src="visionweave.js"></script>
+</body>
+
+</html>
