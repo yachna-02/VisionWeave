@@ -11,11 +11,11 @@
 
 ⚙️ Efficient inference: Optimized for CUDA with attention slicing and float16 precision.<br>
 
-**🛠️ Tech Stack**
+**🛠️ Tech Stack** <br>
 
-Core Framework :	PyTorch, Diffusers
-Model Backends	: Stable Diffusion, ControlNet, GFPGAN
-Image Processing	: OpenCV, PIL, NumPy
-Utilities	: Regular Expressions (re), OS, Subprocess
-Device Support : CUDA / CPU Auto-detection
+Core Framework :	PyTorch, Diffusers <br>
+Model Backends	: Stable Diffusion, ControlNet, GFPGAN <br>
+Image Processing	: OpenCV, PIL, NumPy <br>
+Utilities	: Regular Expressions (re), OS, Subprocess <br>
+Device Support : CUDA / CPU Auto-detection <br>
 
